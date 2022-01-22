@@ -192,6 +192,7 @@ form.addEventListener('submit', e => {
         console.log('Invalid number of activities selected prevented submission');
         e.preventDefault();
     }
+    if(document.getElementById(`payment`).value == "credit-card"){
 
     if (!elementValidator(ccNumElement, ccNumRegEx)) {
         console.log('Invalid credit card number prevented submission');
@@ -208,7 +209,7 @@ form.addEventListener('submit', e => {
         e.preventDefault();
     }
 
-});
+}});
 
 
 form.addEventListener('focusout', e => {
@@ -267,15 +268,4 @@ activitiesBoxElement.addEventListener('focusout', e => {
     }
 });
 
-class Circle {
-    set radius(radius){
-        radius = this._radius
-    }
-    set area(area){
-        area = this._area;
-    }
-    set circumference(circumference){
-        this._circumference = circumference
-    }}
 
-    const circ = new Circle();
